@@ -21,6 +21,7 @@ let data = [
         { range: [0, 250], color: "white" },
         { range: [250, 400], color: "gray" }
       ],
+      bar: { color: "lightblue" },
       threshold: {
         line: { color: "red", width: 4 },
         thickness: 0.75,
