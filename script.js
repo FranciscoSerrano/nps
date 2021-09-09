@@ -31,7 +31,7 @@ let data = [
   }
 ];
 
-let layout = { width: 600, height: 450, margin: { t: 0, b: 0 } };
+let layout = { width: 400, height: 250, margin: { t: 0, b: 0 } };
 Plotly.newPlot('gauge', data, layout);
 
 promotersValue.innerHTML = promoterSlider.value; // Display the default slider value
