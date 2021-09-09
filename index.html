@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>NPS</title>
+</head>
+<body>
+  <div class="slidecontainer promoters">
+    <p>Promoters: <span id="promotersValue"></span></p>
+    <input type="range" min="0" max="300" value="150" class="slider" id="promoters">
+  </div>
+  <div class="slidecontainer passives">
+    <p>Passives: <span id="passivesValue"></span></p>
+    <input type="range" min="0" max="300" value="150" class="slider" id="passives">
+  </div>
+  <div class="slidecontainer detractors">
+    <p>Detractors: <span id="detractorsValue"></span></p>
+    <input type="range" min="0" max="300" value="150" class="slider" id="detractors">
+  </div>
+  <div class="NPS-Score">
+    <p>NPS:</p>
+    <p id="NPS"></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
