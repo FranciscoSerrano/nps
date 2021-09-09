@@ -18,13 +18,17 @@ let data = [
     gauge: {
       axis: { range: [-100, 100] },
       steps: [
-        { range: [0, 250], color: "white" },
-        { range: [250, 400], color: "gray" }
+        { range: [-100, 60], color: "#f17373" },
+        { range: [60, 80], color: "#f3fa91" },
+        { range: [80, 100], color: "#85e274" },
       ],
-      bar: { color: "lightblue" },
+      bar: { 
+        color: "#e0e0e0",
+        thickness: .5,
+      },
       threshold: {
-        line: { color: "red", width: 4 },
-        thickness: 0.75,
+        line: { color: "black", width: 4 },
+        thickness: .8,
         value: 70
       }
     }
