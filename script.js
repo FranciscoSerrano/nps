@@ -38,9 +38,9 @@ let data = [
 let layout = { width: 400, height: 250, margin: { t: 0, b: 0 } };
 Plotly.newPlot('gauge', data, layout);
 
-promotersValue.innerHTML = promoterSlider.value; // Display the default slider value
-passivesValue.innerHTML = passiveSlider.value; // Display the default slider value
-detractorsValue.innerHTML = detractorSlider.value; // Display the default slider value
+promotersValue.value = promoterSlider.value; // Display the default slider value
+passivesValue.value = passiveSlider.value; // Display the default slider value
+detractorsValue.value = detractorSlider.value; // Display the default slider value
 
 let p = parseInt(promoterSlider.value);
 let a = parseInt(passiveSlider.value);
@@ -48,16 +48,30 @@ let d = parseInt(detractorSlider.value);
 nps.innerHTML = calculateNPS(p, a, d);
 // Update the current slider value (each time you drag the slider handle)
 promoterSlider.oninput = function() {
-  promotersValue.innerHTML = this.value;
+  promotersValue.value = this.value;
   updateNPS();
 }
 passiveSlider.oninput = function() {
-  passivesValue.innerHTML = this.value;
+  passivesValue.value = this.value;
   updateNPS();
 }
 
 detractorSlider.oninput = function() {
-  detractorsValue.innerHTML = this.value;
+  detractorsValue.value = this.value;
+  updateNPS();
+}
+// Update the current slider value when you manually enter a number
+promotersValue.onsubmit = function() {
+  promoterSlider.value = this.value;
+  updateNPS();
+}
+passivesValue.onsubmit = function() {
+  passiveSlider.value = this.value;
+  updateNPS();
+}
+
+detractorsValue.onsubmit = function() {
+  detractorSlider.value = this.value;
   updateNPS();
 }
 
@@ -72,8 +86,15 @@ function calculateNPS(p, a, d) {
 function updateNPS() {
   p = parseInt(promoterSlider.value);
   a = parseInt(passiveSlider.value);
-  d = parseInt(detractorSlider.value);
+  d = parseInt(detractorsValue.value);
   nps.innerHTML = calculateNPS(p, a, d);
-  data[0].value = parseInt(nps.innerHTML).toFixed(2);
+  data[0].value = Math.round(parseFloat(nps.innerHTML));
   Plotly.newPlot('gauge', data, layout);
+}
+
+function submitValue() {
+  promoterSlider.value = promotersValue.value;
+  passiveSlider.value = passivesValue.value;
+  passiveSlider.value = detractorsValue.value;
+  updateNPS();
 }

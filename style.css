@@ -4,6 +4,12 @@ body {
   font-family: 'Rubik', sans-serif;
 }
 
+input {
+  font-family: 'Rubik', sans-serif;
+  font-size: large;
+  width: 80px;
+}
+
 .slidecontainer {
  text-align: center;
  font-size: large;
