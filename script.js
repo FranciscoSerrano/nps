@@ -61,16 +61,16 @@ detractorSlider.oninput = function() {
   updateNPS();
 }
 // Update the current slider value when you manually enter a number
-promotersValue.onsubmit = function() {
+promotersValue.onchange = function() {
   promoterSlider.value = this.value;
   updateNPS();
 }
-passivesValue.onsubmit = function() {
+passivesValue.onchange = function() {
   passiveSlider.value = this.value;
   updateNPS();
 }
 
-detractorsValue.onsubmit = function() {
+detractorsValue.onchange = function() {
   detractorSlider.value = this.value;
   updateNPS();
 }
@@ -92,9 +92,3 @@ function updateNPS() {
   Plotly.newPlot('gauge', data, layout);
 }
 
-function submitValue() {
-  promoterSlider.value = promotersValue.value;
-  passiveSlider.value = passivesValue.value;
-  passiveSlider.value = detractorsValue.value;
-  updateNPS();
-}
