@@ -58,9 +58,9 @@ input {
 
 .promoter-slider{
   -webkit-appearance: none;
-  width: 60%;
+  width: 80%;
   height: 15px;
-  border-radius: 5px;   
+  border-radius: 30px;   
   background: #85e274;
   outline: none;
   opacity: 0.7;
@@ -88,9 +88,9 @@ input {
 
 .passive-slider{
   -webkit-appearance: none;
-  width: 60%;
+  width: 80%;
   height: 15px;
-  border-radius: 5px;   
+  border-radius: 30px;   
   background: #f3fa91;
   outline: none;
   opacity: 0.7;
@@ -118,9 +118,9 @@ input {
 
 .detractor-slider{
   -webkit-appearance: none;
-  width: 60%;
+  width: 80%;
   height: 15px;
-  border-radius: 5px;   
+  border-radius: 30px;   
   background: #f17373;
   outline: none;
   opacity: 0.7;
