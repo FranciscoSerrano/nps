@@ -1,31 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Rubik', sans-serif;
+  background-image: linear-gradient(to bottom right, rgb(77, 116, 243), rgb(116, 230, 214));
+  height: 100vh;
 }
 
 input {
   font-family: 'Rubik', sans-serif;
   font-size: large;
-  width: 80px;
+  width: 70px;
 }
 
-.slidecontainer {
- text-align: center;
- font-size: large;
+.slider-container {
+  margin-top: 10px;
 }
 
 .gauge-container {
+  margin-top: 30px;
+}
+
+.gauge-container,
+.slider-container {
+  border-radius: 10px;
+  background: white;
+}
+
+.promoters, 
+.passives, 
+.detractors, 
+.gauge-container  {
+  text-align: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+.gauge-container,
+.detractors {
+  padding-bottom: 20px;
+}
+
 .NPS-Score {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   font-size: large;
+  padding-top: 20px;
 }
 
 /* SLIDER COLORS AND STYLES */

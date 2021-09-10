@@ -9,24 +9,27 @@
   <title>NPS</title>
 </head>
 <body>
-  <div class="slidecontainer promoters">
-    <p>Promoters: <input type="number" inputmode="numeric" pattern="[0-9]*" id="promotersValue"></input></p>
-    <input type="range" min="0" max="500" value="250" class="promoter-slider" id="promoters">
-  </div>
-  <div class="slidecontainer passives">
-    <p>Passives: <input type="number" inputmode="numeric" pattern="[0-9]*" id="passivesValue"></input></p>
-    <input type="range" min="0" max="300" value="150" class="passive-slider" id="passives">
-  </div>
-  <div class="slidecontainer detractors">
-    <p>Detractors: <input type="number" inputmode="numeric" pattern="[0-9]*" id="detractorsValue"></input></p>
-    <input type="range" min="0" max="300" value="150" class="detractor-slider" id="detractors">
-  </div>
-  <div class="NPS-Score">
-    <p>NPS: <span id="NPS"></span></p>
-  </div>
   <div class="gauge-container">
+    <p>Goal: <input min="-100" max="100" type="number" inputmode="numeric" pattern="[0-9]*" value="70" id="goal"></input></p>
     <div id="gauge"></div>
   </div>
+  <div class="slider-container">
+    <div class="NPS-Score">
+      <p>NPS: <span id="NPS"></span></p>
+    </div>
+    <div class="promoters">
+      <p>Promoters: <input type="number" inputmode="numeric" pattern="[0-9]*" id="promotersValue"></input></p>
+      <input type="range" min="0" max="500" value="250" class="promoter-slider" id="promoters">
+    </div>
+    <div class="passives">
+      <p>Passives: <input type="number" inputmode="numeric" pattern="[0-9]*" id="passivesValue"></input></p>
+      <input type="range" min="0" max="300" value="150" class="passive-slider" id="passives">
+    </div>
+    <div class="detractors">
+      <p>Detractors: <input type="number" inputmode="numeric" pattern="[0-9]*" id="detractorsValue"></input></p>
+      <input type="range" min="0" max="300" value="150" class="detractor-slider" id="detractors">
+  </div>
+</div>
   <script src="script.js"></script>
 </body>
 </html>

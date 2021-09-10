@@ -6,6 +6,7 @@ let promotersValue = document.getElementById("promotersValue");
 let passivesValue = document.getElementById("passivesValue");
 let detractorsValue = document.getElementById("detractorsValue");
 let nps = document.getElementById("NPS");
+let goal = document.getElementById("goal");
 
 let data = [
   {
@@ -74,7 +75,11 @@ detractorsValue.onchange = function() {
   detractorSlider.value = this.value;
   updateNPS();
 }
-
+// Update the goal
+goal.onchange = function() {
+  goal.value = this.value;
+  updateNPS();
+}
 
 function calculateNPS(p, a, d) {
   const percentPromoter = ((p / (p + a + d)) * 100).toFixed(2);
@@ -89,6 +94,7 @@ function updateNPS() {
   d = parseInt(detractorsValue.value);
   nps.innerHTML = calculateNPS(p, a, d);
   data[0].value = Math.round(parseFloat(nps.innerHTML));
+  data[0].gauge.threshold.value = parseInt(goal.value);
+  data[0].delta.reference = parseInt(goal.value);
   Plotly.newPlot('gauge', data, layout);
 }
-
