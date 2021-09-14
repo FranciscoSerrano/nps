@@ -19,13 +19,13 @@ let data = [
     gauge: {
       axis: { range: [-100, 100] },
       steps: [
-        { range: [-100, 60], color: "#f17373" },
-        { range: [60, 80], color: "#f3fa91" },
-        { range: [80, 100], color: "#85e274" },
+        { range: [-100, 60], color: "#f9114f" },
+        { range: [60, 80], color: "#e9f817" },
+        { range: [80, 100], color: "#6dd941" },
       ],
       bar: { 
-        color: "#e0e0e0",
-        thickness: .5,
+        color: "#00000080",
+        thickness: .7,
       },
       threshold: {
         line: { color: "black", width: 4 },
@@ -36,7 +36,7 @@ let data = [
   }
 ];
 
-let layout = { width: 350, height: 250, margin: { t: 0, b: 0 } };
+let layout = { width: 350, height: 250, margin: { t: 0, b: 0 }, paper_bgcolor: "rgba(0,0,0,0)", font : {color: "#fff" }};
 Plotly.newPlot('gauge', data, layout);
 
 promotersValue.value = promoterSlider.value; // Display the default slider value
