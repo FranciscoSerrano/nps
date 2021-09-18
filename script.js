@@ -23,7 +23,7 @@ let data = [
         { range: [60, 80], color: "#e9f817" },
         { range: [80, 100], color: "#6dd941" },
       ],
-      bar: { 
+      bar: {
         color: "#00000080",
         thickness: .7,
       },
@@ -78,6 +78,50 @@ detractorsValue.onchange = function() {
 // Update the goal
 goal.onchange = function() {
   goal.value = this.value;
+  updateNPS();
+}
+
+// plus/minus buttons
+const promoterMinus = document.getElementById('promoter-minus')
+const promoterPlus = document.getElementById('promoter-plus')
+const passiveMinus = document.getElementById('passive-minus')
+const passivePlus = document.getElementById('passive-plus')
+const detractorMinus = document.getElementById('detractor-minus')
+const detractorPlus = document.getElementById('detractor-plus')
+
+promoterMinus.onclick = function() {
+  promoterSlider.value--;
+  promotersValue.value--;
+  updateNPS();
+}
+
+promoterPlus.onclick = () => {
+  promoterSlider.value++;
+  promotersValue.value++;
+  updateNPS();
+}
+
+passiveMinus.onclick = function() {
+  passiveSlider.value--;
+  passivesValue.value--;
+  updateNPS();
+}
+
+passivePlus.onclick = () => {
+  passiveSlider.value++;
+  passivesValue.value++;
+  updateNPS();
+}
+
+detractorMinus.onclick = function() {
+  detractorSlider.value--;
+  detractorsValue.value--;
+  updateNPS();
+}
+
+detractorPlus.onclick = () => {
+  detractorSlider.value++;
+  detractorsValue.value++;
   updateNPS();
 }
 

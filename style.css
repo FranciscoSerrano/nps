@@ -56,9 +56,9 @@ input {
   background:#121212;
 }
 
-.promoters, 
-.passives, 
-.detractors, 
+.promoters,
+.passives,
+.detractors,
 .gauge-container  {
   text-align: center;
   display: flex;
@@ -85,7 +85,7 @@ input {
   -webkit-appearance: none;
   width: 80%;
   height: 15px;
-  border-radius: 30px;   
+  border-radius: 30px;
   background: #6dd941;
   outline: none;
   -webkit-transition: .2s;
@@ -97,7 +97,7 @@ input {
   appearance: none;
   width: 25px;
   height: 25px;
-  border-radius: 50%; 
+  border-radius: 50%;
   background: #5bb637;
   cursor: pointer;
 }
@@ -114,7 +114,7 @@ input {
   -webkit-appearance: none;
   width: 80%;
   height: 15px;
-  border-radius: 30px;   
+  border-radius: 30px;
   background: #e9f817;
   outline: none;
   -webkit-transition: .2s;
@@ -126,7 +126,7 @@ input {
   appearance: none;
   width: 25px;
   height: 25px;
-  border-radius: 50%; 
+  border-radius: 50%;
   background: #dbe916;
   cursor: pointer;
 }
@@ -143,7 +143,7 @@ input {
   -webkit-appearance: none;
   width: 80%;
   height: 15px;
-  border-radius: 30px;   
+  border-radius: 30px;
   background: #f9114f;
   outline: none;
   -webkit-transition: .2s;
@@ -155,7 +155,7 @@ input {
   appearance: none;
   width: 25px;
   height: 25px;
-  border-radius: 50%; 
+  border-radius: 50%;
   background: #df0e46;
   cursor: pointer;
 }
@@ -180,12 +180,19 @@ input {
   display: block;
   height: 40px;
   width: 40px;
+  min-height: 40px;
+  min-width: 40px;
+  max-height: 40px;
+  max-width: 40px;
+  box-sizing: content-box;
+  padding: 0;
   border: 2px solid;
   border-radius: 100%;
   font-family: monospace;
   font-size: 24px;
   line-height: 0;
   text-align: center;
+  -webkit-appearance: none;
 }
 
 .input-plus:active,
