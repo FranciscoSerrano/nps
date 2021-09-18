@@ -193,6 +193,7 @@ input {
   line-height: 0;
   text-align: center;
   -webkit-appearance: none;
+  touch-action: none;
 }
 
 .input-plus:active,
