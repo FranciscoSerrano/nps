@@ -19,15 +19,27 @@
     </div>
     <div class="promoters">
       <p>Promoters: <input type="number" inputmode="numeric" pattern="[0-9]*" id="promotersValue"></input></p>
-      <input type="range" min="0" max="500" value="250" class="promoter-slider" id="promoters">
+      <div class="input-container">
+        <input type="button" class="input-minus" value="-">
+        <input type="range" min="0" max="500" step="1" value="250" class="promoter-slider" id="promoters">
+        <input type="button" class="input-plus" value="+">
+      </div>
     </div>
     <div class="passives">
       <p>Passives: <input type="number" inputmode="numeric" pattern="[0-9]*" id="passivesValue"></input></p>
-      <input type="range" min="0" max="300" value="150" class="passive-slider" id="passives">
+      <div class="input-container">
+        <input type="button" class="input-minus" value="-">
+        <input type="range" min="0" max="300" step="1" value="150" class="passive-slider" id="passives">
+        <input type="button" class="input-plus" value="+">
+      </div>
     </div>
     <div class="detractors">
       <p>Detractors: <input type="number" inputmode="numeric" pattern="[0-9]*" id="detractorsValue"></input></p>
-      <input type="range" min="0" max="300" value="150" class="detractor-slider" id="detractors">
+      <div class="input-container">
+        <input type="button" class="input-minus" value="-">
+        <input type="range" min="0" max="300" step="1" value="150" class="detractor-slider" id="detractors">
+        <input type="button" class="input-plus" value="+">
+      </div>
   </div>
 </div>
   <script src="script.js"></script>
